@@ -3,13 +3,18 @@ const dict = [
   ['what do you', 'whatchah'],
   ["i'm going to", 'ahmma'],
   ["i'm gonna", 'ahmma'],
+  ['going to', 'gonna'],
   // ['the ', 'dâh '],
   // ['you', 'yah'],
   ['what you', 'wha-tchu-yah'],
+  ['what have you', 'whatcha'],
+  ['some more', "s'more"],
+  ['used to', 'usta'],
+  ['ve i', 'vi', false],
+  ["isn't it", 'innit'],
   ['t to', "'râh"],
   ['t do', 'tchâh'],
 
-  ["don't", 'ron'],
   ['got to', 'garâh'],
   ['i am', 'amm'],
   ["i'm", 'amm'],
@@ -23,7 +28,12 @@ const dict = [
   ["could've", 'kurah'],
   ['which is', 'wichis'],
   ['could have', 'kurah'],
-  ["would've", 'wurah'][('would have', 'wurah')],
+  ["would've", 'wurah'],
+  ['would have', 'wurah'],
+  ['must have', 'mustah'],
+  ["must've", 'mustah'],
+  ['ought to', 'oughrah'],
+  ['do you', "d'you"],
   ["it's the", "it'sâh"],
   ['it is the', "it'sâh"],
   ['let just', 'letjust'],
@@ -55,6 +65,7 @@ const dict = [
   ["and I'd always", 'anai-rolways'],
   ["and it'll", "anir'll"],
   ['and this', 'anis'],
+  ['a lot of', 'alotta'],
   ["why he's so", 'whaiSS so'],
   ['an example', 'anexample'],
   ["and that's", 'anets'],
@@ -74,6 +85,7 @@ const dict = [
   ['if he', 'ife'],
   ['build her', 'builder'],
   ['Maybe he', 'maybe i '],
+  ["don't", 'ron'],
   ['died in there', 'dairiner'],
   ['them all', 'temou'],
   ['something in the', 'sometinina'],
@@ -95,8 +107,10 @@ const dict = [
   [' her', ' er'],
   [' he', ' e'],
   [' she', ' e'],
+  ['t a', 'ttê'],
   ['n th', 'n'],
-
+  ['d to', 'dâh'],
+  ['t to', 'dâh'],
   ['k o', 'ko'],
   ['k a', 'ka'],
   ['p o', 'po'],
@@ -111,22 +125,24 @@ const dict = [
   ['t ', ''],
   ['n o', 'no'],
   ['n e', 'ne'],
+  ['n i', 'ni'],
   ['n a', 'na'],
   ['ne o', 'no'],
   ['d a', 'da'],
   ['t l ', 'tl'],
-  ['t a', 't-a'],
   ['m i', 'mi'],
+  [' to ', ' râ '],
+  ['he i', 'hei'],
 ]
 
 const frase = `
-but it was time
+The truth is, this technology is in its infancy,
 `
+// I don't want you to get the impression
 // by then and I went on the
-
-const newFrase = dict.reduce(
-  (acc, curr) => (curr ? acc.replace(new RegExp(curr[0], 'gi'), curr[1]) : acc),
-  frase
-)
-
-console.log(newFrase)
+console.log(frase)
+const newFrase = dict.reduce((acc, curr) => {
+  const replaced = curr ? acc.replace(new RegExp(curr[0], 'gi'), curr[1]) : acc
+  if (acc !== replaced) console.log(replaced.replace('\n', ''))
+  return replaced
+}, frase)
