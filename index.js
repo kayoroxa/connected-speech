@@ -63,7 +63,7 @@ let myDict = [
   ['t you', 'tchyah'],
   ['lot of s', 'loras'],
   ['a lot of', 'alotta'],
-  ['what', 'wha'],
+  ['\\bwhat\\b', 'wha'],
   ["should've", 'shulrah'],
   ['should have', 'shulrah'],
   ["we'd have", 'we.rave'],
