@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <form id="signup">
+          <label for="sentence">Sentence:</label><br />
+          <input
+            type="text"
+            id="sentence"
+            name="sentence"
+            autocomplete="off"
+          /><br />
+        </form>
+
+        <div class="result"></div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+    <script>
+      const form = document.getElementById('signup')
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        const querySentence = form.elements['sentence'].value
+        const { steps } = generateConnected(querySentence)
+        const resultElem = document.querySelector('.result')
+        resultElem.innerHTML = ''
+
+        for (let step of steps) {
+          const p = document.createElement('p')
+          p.textContent = step
+          resultElem.appendChild(p)
+        }
+
+        if (steps.length === 0) {
+          resultElem.textContent = 'None'
+        }
+      })
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
