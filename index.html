@@ -32,10 +32,9 @@
     <script src="./index.js"></script>
     <script>
       const form = document.getElementById('signup')
+      let querySentence = localStorage.getItem('query-sentence') || false
 
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        const querySentence = form.elements['sentence'].value
+      function putAnswer() {
         const { steps } = generateConnected(querySentence)
         const resultElem = document.querySelector('.result')
         resultElem.innerHTML = ''
@@ -49,6 +48,18 @@
         if (steps.length === 0) {
           resultElem.textContent = 'None'
         }
+      }
+
+      if (querySentence) {
+        form.elements['sentence'].value = querySentence
+        putAnswer(querySentence)
+      }
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        querySentence = form.elements['sentence'].value
+        putAnswer(querySentence)
+        localStorage.setItem('query-sentence', querySentence)
       })
     </script>
     <script src="./index.js"></script>
