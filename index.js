@@ -33,6 +33,7 @@ let myDict = [
   ["it's a", 'tsuh'],
   ['i am', 'aiem'],
   ["i'm", 'amm'],
+  ["let it", 'léri'],
   ['what do you', 'whatcha'],
   ['what have you', 'whatcha'],
   ['what are you', 'whatcha'],
