@@ -43,6 +43,7 @@ let myDict = [
   ['did you', 'djəh'],
   ['d your', '-dyour'],
   ['your', 'yər'],
+  ['p away', 'paway'],
   ["you're", 'yər'],
   ['t you', '-tchiu'],
   ['you', 'yə'],
