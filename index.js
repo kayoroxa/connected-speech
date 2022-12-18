@@ -47,6 +47,7 @@ let myDict = [
   ['you', 'yə'],
   ['\\bi\\b', 'ai'],
   ['\\bThe a', 'Thi-a'],
+  ['\\bface\\b', 'feiss'],
   ['me ', '-M'],
   ['m ', '-M'],
   ['ve i', 'vi', false],
@@ -248,9 +249,9 @@ function generateConnected(frase) {
 
   const sentenceConnected = myDict.reduce((acc, curr) => {
     const replaced = curr
-      ? acc.replace(new RegExp(curr[0], 'gi'), curr[1])
+      ? acc.replace(new RegExp(curr[0], 'gi'), curr[1].replace(/\./g, '-'))
       : acc
-    if (acc !== replaced) console.log('       R:', curr)
+    if (acc !== replaced) console.log('       R:', curr.join(' = '))
     if (acc !== replaced) {
       steps.push(replaced.replace('\n', ''))
       console.log(replaced.replace('\n', ''))
