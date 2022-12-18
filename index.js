@@ -149,6 +149,7 @@ let myDict = [
   // ['if he', 'ife'],
   ['build her', 'builder'],
   ['Maybe he', 'maybe i '],
+  ['thought of', 'thórov'],
   ["don't", 'ron'],
   ['died in there', 'dairiner'],
   ['them all', 'themou'],
