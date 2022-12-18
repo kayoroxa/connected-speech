@@ -5,6 +5,8 @@ let myDict = [
   ['k who', '-ko'],
 
   ['can', 'ken'],
+  ['came', 'keim'],
+  ['out', 'aut'],
   ['gonna', 'gon'],
   ['t do\\b', 'tchú'],
   ['going to', 'gonna'],
@@ -24,7 +26,7 @@ let myDict = [
   ['about it', 'abou-rêt'],
   ['saw it', 'sóêt'],
   ['But I', 'bâârai'],
-  ['nt(a|e|i|o|u)', 'n$1'],
+  ['nt(a|e|i|o|u|á|é|í|ó|ú)', 'n$1'],
   ["what's", 'watts'],
   ['with the', 'ui-thee'],
   ["it's a", 'tsuh'],
@@ -43,6 +45,7 @@ let myDict = [
   ['t you', '-tchiu'],
   ['you', 'yə'],
   ['\\bi\\b', 'ai'],
+  ['\\bThe a', 'Thi-a'],
   ['me ', '-M'],
   ['m ', '-M'],
   ['ve i', 'vi', false],
@@ -121,12 +124,12 @@ let myDict = [
   ['why would they', 'ua rdey'],
   ['how would i', 'rauurai'],
   ['would he', 'uâri'],
-  ['would (a|e|i|o|u)', `u-r$1`],
+  ['would (a|e|i|o|u|á|é|í|ó|ú)', `u-r$1`],
   ["and I'd always", 'anai-rolways'],
   ["and it'll", "anir'll"],
   ['and this', 'anis'],
   ['and w', 'anw'],
-  ['t to\\b', '.râh'],
+  ['t to\\b', '-râh'],
   ['t do\\b', 'tchâh'],
   ["why he's so", 'whaiSS so'],
   ['an example', 'anexample'],
@@ -155,7 +158,9 @@ let myDict = [
   ['them all', 'themou'],
   ['something in the', 'sometinina'],
   ['that in', 'tharin'],
-  ['was', 'waz'],
+  ['\\bwas\\b', 'waz'],
+  ['\\ball\\b', 'óll'],
+  ['\\bour\\b', 'aɹ'],
   ['that is', 'thadis'],
   ['for the', 'fôthê'],
   ["didn't", 'rin'],
@@ -178,7 +183,7 @@ let myDict = [
   ['cause s', 'causs'],
   ['out in', 'a··in'],
   [' will', "'ll"],
-  ['r (o|a|e|i|u)', '-r$1'],
+  ['r (a|e|i|o|u|á|é|í|ó|ú)', '-r$1'],
   ['r h', '-rr'],
   ['t h', '.dd'],
   ['s w', '.su'],
@@ -197,11 +202,14 @@ let myDict = [
   ['t a', 'ttê'],
   ['n th', 'n'],
   ['d to', '-dâh'],
-
+  ['ce (a|i|o|u|á|í|ó|ú)', '-ç$1'],
+  ['n (a|e|i|o|u|á|é|í|ó|ú)', '-n$1'],
+  ['s (a|e|i|o|u|á|é|í|ó|ú)', '-z$1'],
   ['t i\\b', 'ddai'],
   ['t i\\b', 'ddi'],
   ['d i\\b', 'rai'],
   ['n one', 'nuone'],
+  ['l?l (a|e|i|o|u|á|é|í|ó|ú)', '-l$1'],
   // ['d ', ''],
   ['t t', '.t'],
   // ['t ', ''],
@@ -242,7 +250,7 @@ function generateConnected(frase) {
     const replaced = curr
       ? acc.replace(new RegExp(curr[0], 'gi'), curr[1])
       : acc
-    if (acc !== replaced) console.log('       R:', curr[0])
+    if (acc !== replaced) console.log('       R:', curr)
     if (acc !== replaced) {
       steps.push(replaced.replace('\n', ''))
       console.log(replaced.replace('\n', ''))
