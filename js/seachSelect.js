@@ -11,9 +11,11 @@ function getSelectionText() {
 document.addEventListener('keydown', e => {
   const text = getSelectionText()
   if (e.key.toLowerCase() === 'y' && text) {
+    e.preventDefault()
     window.open('https://youglish.com/pronounce/' + text, '_blank')
   }
   if (e.key.toLowerCase() === 'f' && text) {
+    e.preventDefault()
     window.open('https://yarn.co/yarn-find?text=' + text, '_blank')
   }
 })
