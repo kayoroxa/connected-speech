@@ -143,7 +143,7 @@ let myDict = [
   ['there is', 'theris'],
   ['watching a', 'watchina'],
   ['wish i', 'wishai'],
-  ['with all', 'withou'],
+  ['with all', 'wi-thól'],
   ['did i ever tell you', 'dirai ever tellyou'],
   ["How'd you", 'howdju'],
 
