@@ -3,7 +3,7 @@ let myDict = [
   ["i'm going to", 'ahmma'],
   ["i'm gonna", 'ahmma'],
   ['k who', '-ko'],
-
+  ['this is the', 'thi-si-zdə'],
   ['can', 'ken'],
   ['his', 'hiz'],
   ['came', 'keim'],
@@ -25,7 +25,8 @@ let myDict = [
   ['\\bthrough\\b', 'thruu'],
   ['going to', 'gonna'],
   ['re it\\b', 'ri'],
-
+  ['st of\\b', 's-təv'],
+  ['t of\\b', '-rəv'],
   ['when are you', 'whenriu'],
   ['because', "'cause"],
   ['with us', 'wi-THÂs'],
@@ -214,7 +215,7 @@ let myDict = [
   ['cause s', 'causs'],
   ['out in', 'a··in'],
   [' will', "'ll"],
-  ['r (a|e|i|o|u|á|é|í|ó|ú)', '-r$1'],
+  ['r (a|e|i|o|u|á|é|í|ó|ú)', '-ɹ$1'],
   ['r h', '-rr'],
   ['t h', '.dd'],
   ['s w', '.s(u)w'],
@@ -228,8 +229,8 @@ let myDict = [
   ['d l', 'dl'],
   ['t as', '-ttás'],
   // ['t a', 'ttê'],
-
-  ['n th', 'n'],
+  ['ot a', 'o-ra'],
+  ['n th(?!r)', 'n'],
   ['d to', '-dâh'],
 
   ['t (s)', '-t$1'],
