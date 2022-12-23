@@ -67,6 +67,7 @@ let myDict = [
   ['does this have', 'dâzês.ave'],
   ['does that', 'zat'],
   ['nd that', 'n.nat'],
+  ["'?t th", '-th'],
   ['does this', 'dâzes'],
   ['as him', 'asim'],
   ['asked (him|her|if)', 'esT.$1'],
@@ -137,6 +138,7 @@ let myDict = [
   ['in our', 'inour'],
   ['trying to', 'truiaida '],
   ['taking to', 'teikinda'],
+  ['to get', 'râget'],
   ['get to', 'getâ'],
   ['it has', 'idas'],
   ['s have', '.sêv'],
@@ -210,6 +212,7 @@ let myDict = [
   // ['ing\\b', 'in'],
   ['(v|p|t|k)ed\\b (a|e|i|o|u)', '$1-t$2'],
   ['ned\\b (a|e|i|o|u)', 'n-d$1'],
+  ['(k|p|f|g)ed the', '$1t-thi'],
   ['(v|p|t|k|n)ed\\b', '$1t'],
   ['t h', "-t'h"],
   ['ve th', '-Vth'],
@@ -237,6 +240,7 @@ let myDict = [
   ['t as', '-ttás'],
   // ['t a', 'ttê'],
   ['ot a', 'o-ra'],
+
   ['n th(?!r)', 'n'],
   ['ne th(?!r)', 'n-th'],
   ['d to', '-dâh'],
@@ -275,7 +279,7 @@ let myDict = [
   ['re o', 'ro'],
   ['ing the', 'inə'],
   ["isn't the", 'izn-thii'],
-  ['t t', '.t'],
+
   ['(?<=\\w)(m|k|r|f)e\\b', '$1'],
   ['(?<=k|p|t|v)ed', 't'],
   ['m (a|e|i|o|u|á|é|í|ó|ú|y|w|ə)', '-m$1'],
@@ -284,9 +288,13 @@ let myDict = [
   ['n (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-n$1'],
   ['(?<!s)s (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-z$1'],
   ['ss (a|e|i|o|u|á|é|í|ó|ú|y|ə)', 's-s$1'],
-  ['(?<=a|e|i|o|u|r|ə)\\s?(t|d)+\\s?(a|e|i|o|u|á|é|í|ó|ú|y|ə)(?!a|k)', '-r$2'],
+  [
+    '(?<=a|e|i|o|u|r|ə)\\s?(t|d)+\\s?(a|e|i|o|u|á|é|í|ó|ú|y|ə)(?!a|k|y)',
+    '-r$2',
+  ],
   ['t (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-t$1'],
   ['v (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-v$1'],
+
   ['(k|p|f|g|bly|ch) (a|e|i|o|u|á|é|í|ó|ú|y|ea|w|ə)', '-$1$2'],
   ['n m', '.m'],
   ['if we', 'ife', false],
@@ -294,6 +302,7 @@ let myDict = [
   ['(?<!h)e e', 'e'],
   ['s s', '-s'],
   ['s th', '-z'],
+  ['t t', '.t'],
 
   ['(s|z) r', '-$1ur'],
   // ['(e|a)r\\b', '$1ɹ'], // terminando com ɹ
