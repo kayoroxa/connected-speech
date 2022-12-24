@@ -8,6 +8,7 @@ let myDict = [
   ['you were to', 'you ədə'],
   ['can', 'ken'],
   ['his', 'hiz'],
+  ['\\bus\\b', 'as'],
   ['came', 'keim'],
   ['ne tod', 'n-rəd'],
   ['\\bout\\b', 'aut'],
@@ -230,7 +231,7 @@ let myDict = [
   ['cause s', 'causs'],
   ['out in', 'a··in'],
   [' will', "'ll"],
-  ['r (a|e|i|o|u|á|é|í|ó|ú|ə)', '-ɹ$1'],
+  ['re? (a|e|i|o|u|á|é|í|ó|ú|ə)', 'r-ɹ$1'],
   ['r h', '-rr'],
   ['ble', 'bl'],
   ['t h', '.dd'],
@@ -287,7 +288,7 @@ let myDict = [
   ["isn't the", 'izn-thii'],
 
   ['and', 'an'],
-
+  ['ide (you|yə)', 'i-dju'],
   ['(?<=\\w)(m|k|r|f)e\\b', '$1'],
   ['m (a|e|i|o|u|á|é|í|ó|ú|y|w|ə)', '-m$1'],
   ['z (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-z$1'],
@@ -297,7 +298,7 @@ let myDict = [
   ['ss (a|e|i|o|u|á|é|í|ó|ú|y|ə)', 's-s$1'],
   ['(?<=a|e|i|o|u|r|ə)(t|d)+e?\\s?(a|e|i|o|u|á|é|í|ó|ú|y|ə)(?!a|k|y)', '-r$2'],
   ['t (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-t$1'],
-  ['v (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-v$1'],
+  ['(v|u|w) (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-$1$2'],
 
   ['(k|p|f|g|bly|ch) (a|e|i|o|u|á|é|í|ó|ú|y|ea|w|ə)', '-$1$2'],
   ['n m', '.m'],

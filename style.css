@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
 
+*::selection {
+  color: hsl(170, 40%, 60%);
+}
+
+
 
 * {
   margin: 0;
@@ -56,6 +61,10 @@ section {
   padding: 5px 20px;
   margin-top: 9px;
   font-weight: 600;
+}
+
+.result p:last-child::selection {
+  color: hsl(198, 63%, 38%);
 }
 
 a {
