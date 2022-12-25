@@ -331,22 +331,33 @@ let myDict = [
 function generateConnected(frase) {
   console.log(frase)
   const steps = []
+  const stepsHtml = []
 
   const sentenceConnected = myDict.reduce((acc, curr) => {
-    const replaced = curr
-      ? acc.replace(new RegExp(curr[0], 'gi'), curr[1].replace(/\./g, '-'))
+    const replaceSrt = curr[1].replace(/\./g, '-')
+    const queryStr = curr[0]
+    const replacedSentence = curr
+      ? acc.replace(new RegExp(queryStr, 'gi'), replaceSrt)
       : acc
-    if (acc !== replaced) console.log('       R:', curr.join(' = '))
-    if (acc !== replaced) {
-      steps.push(replaced.replace('\n', ''))
-      console.log(replaced.replace('\n', ''))
+    const replacedSentenceHtml = curr
+      ? acc.replace(
+          new RegExp(`${queryStr}(?<rest>[^ ]*)`, 'gi'),
+          `<span>${replaceSrt}$<rest></span>`
+        )
+      : acc
+    if (acc !== replacedSentence) console.log('       R:', curr.join(' = '))
+    if (acc !== replacedSentence) {
+      steps.push(replacedSentence.replace('\n', ''))
+      stepsHtml.push(replacedSentenceHtml.replace('\n', ''))
+      console.log(replacedSentence.replace('\n', ''))
     }
-    return replaced
+    return replacedSentence
   }, frase)
 
   return {
     sentenceConnected,
     steps,
+    stepsHtml,
   }
 }
 

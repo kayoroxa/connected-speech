@@ -62,9 +62,27 @@ section {
   margin-top: 9px;
   font-weight: 600;
 }
+ .result span {
+  background-color: rgb(69, 70, 75);
+  width: fit-content;
+  /* padding: 5px 20px; */
+  /* margin-top: 9px; */
+  font-weight: 600;
+}
 
-.result p:last-child::selection {
-  color: hsl(198, 63%, 38%);
+
+
+.result p:last-child span {
+  color: unset;
+  background-color: unset;
+  width: unset;
+  padding: unset;
+  margin-top: unset;
+  font-weight: unset;
+}
+
+.result p:last-child::selection, .result span::selection {
+  color: hsl(198, 63%, 31%);
 }
 
 a {
