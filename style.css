@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
 
-*::selection {
-  color: hsl(170, 40%, 60%);
-}
+
 
 
 
@@ -81,7 +79,7 @@ section {
   font-weight: unset;
 }
 
-.result p:last-child::selection, .result span::selection {
+.result p:last-child::selection {
   color: hsl(198, 63%, 31%);
 }
 
@@ -90,4 +88,8 @@ a {
   font-size: 25px;
   margin-bottom: 20px;
   opacity: 0.4;
+}
+
+*::selection {
+  color: hsl(170, 40%, 60%);
 }
