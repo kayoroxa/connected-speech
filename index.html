@@ -38,18 +38,18 @@
       let querySentence = localStorage.getItem('query-sentence') || false
 
       function putAnswer() {
-        const { steps } = generateConnected(querySentence)
+        const { stepsHtml } = generateConnected(querySentence)
         const resultElem = document.querySelector('.result')
         resultElem.innerHTML = ''
 
-        for (let step of steps) {
+        for (let step of stepsHtml) {
           const p = document.createElement('p')
-          p.textContent = step
+          p.innerHTML = step
           resultElem.appendChild(p)
         }
 
-        if (steps.length === 0) {
-          resultElem.textContent = 'None'
+        if (stepsHtml.length === 0) {
+          resultElem.innerHTML = 'None'
         }
       }
 
