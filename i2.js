@@ -5,7 +5,7 @@ let myDict = [
   ['k who', '-ko'],
   ['this is the', 'thi-si-zdə'],
   ['this is', 'thi-siz'],
-  ['you were to', 'you ədə'],
+  ['you were to', 'you-ədə'],
   ['can', 'ken'],
   ['his', 'hiz'],
   ['\\bus\\b', 'as'],
@@ -21,7 +21,7 @@ let myDict = [
   ['what (a|e|i|o|u|á|é|í|ó|ú|y|ə)', 'wha-r$1'],
   ['see', 'sii'],
   ["that i'm", 'tha-raimm'],
-  ["isn't it", 'innit'],
+  ["isn't it", 'in-nit'],
   ['these', 'thiz'],
   ['because it', "b'kazə"],
   ['out of', 'outta'],
@@ -120,8 +120,8 @@ let myDict = [
   ['what do you', 'whatcha'],
   ['what have you', 'whatcha'],
   ['what are you', 'whatcha'],
-  ['some more', "s'more"],
-  ['used to', 'usta'],
+  ['some more', 's-more'],
+  ['used to', 'us-ta'],
   ['each of you', 'etchâviu'],
   ['did you', 'djəh'],
   ['when he', 'whe-ni'],
@@ -138,22 +138,22 @@ let myDict = [
 
   ['ve h(er|him)', '-v$1'],
   ['s of y', 'səy'],
-  ['of what', 'ovuat'],
+  ['of what', 'o-vuat'],
   ['of\\b', 'əv'],
-  ['as well as', 'as wellas'],
-  ['if all goes well', 'ifal goesuell'],
-  ['in our', 'inour'],
-  ['trying to', 'truiaida '],
-  ['taking to', 'teikinda'],
-  ['to get', 'râget'],
-  ['get to', 'getâ'],
+  ['as well as', 'as we-llas'],
+  ['if all goes well', 'i-fal goe-suell'],
+  ['in our', 'i-nour'],
+  ['trying to', 'trua-inda'],
+  ['taking to', 'tei-kinda'],
+  ['to get', 'râ-get'],
+  ['get to', 'ge-tâ'],
   ['it has', 'idas'],
   ['s have', '.sêv'],
   ['s ha', 'sa'],
   ['to that', 'râ that'],
   ['can i', 'canai'],
   ['i want you to', 'iuan-tchê-rê'],
-  ["think i'm", 'thinkM'],
+  ["think i'm", 'thin-kM'],
   ['heard anything', 'heardything'],
   ["there's a", 'deza'],
   ['cause', 'kêz'],
@@ -163,7 +163,7 @@ let myDict = [
   ['de o', '-ddo'],
   ['With an accident', 'withanAccident'],
   ['why would they', 'ua rdey'],
-  ['how would i', 'rauurai'],
+  ['how would i', 'rauu-rai'],
   ['would he', 'uâri'],
   ['would', 'wəd'],
   ['would (a|e|i|o|u|á|é|í|ó|ú|ə)', `u-r$1`],
@@ -175,8 +175,8 @@ let myDict = [
   ['t to\\b', '-râh'],
   ['t do\\b', 'tchâh'],
   ["why he's so", 'whaiSS so'],
-  ['an example', 'anexample'],
-  ["and that's", 'anets'],
+  ['an example', 'a-nexample'],
+  ["and that's", 'a-nets'],
   ['on that', 'onet'],
   ['getting that', 'geinat'],
   ['saying that', 'sayinat'],
@@ -186,12 +186,12 @@ let myDict = [
   ['watching a', 'watchina'],
   ['wish i', 'wishai'],
   ['with all', 'wi-thól'],
-  ['did i ever tell you', 'dirai ever tellyou'],
-  ["How'd you", 'howdju'],
+  ['did i ever tell you', 'di-rai ever tellyou'],
+  ["How'd you", 'how-dju'],
 
-  ['about anything', 'abouranything'],
-  ["l'm actually", "i'machually"],
-  ['go together', 'gorogether'],
+  ['about anything', 'abou-ranything'],
+  ["l'm actually", 'i-machually'],
+  ['go together', 'go-rogether'],
   // ['if he', 'ife'],
   ['build her', 'builder'],
   ['Maybe he', 'maybe i '],
@@ -210,23 +210,23 @@ let myDict = [
   // ['n you', 'nyou'],
   ['with this', 'withis'],
   ['should we', 'shou-we'],
-  ['and i', 'enai'],
+  ['and i', 'e-nai'],
   ["'ve", 'V'],
 
   ['\\bask th(em|ese|at)', 'es-t$1'],
   ['d them', '-dem'],
   ['ss them', '-ssəm'],
   // ['ing\\b', 'in'],
-  ['(v|p|t|k)ed\\b (a|e|i|o|u|ə)', '$1-t$2'],
-  ['ned\\b (a|e|i|o|u|ə)', 'n-d$1'],
-  ['(k|p|f|g)ed the', '$1t-thi'],
-  ['(?<!r)(v|p|t|k|n)ed\\b', '$1t'],
+  ['(v|p|t|k)ed\\b (a|e|i|o|u|ə)', '-$1-t$2'],
+  ['ned\\b (a|e|i|o|u|ə)', '-n-d$1'],
+  ['(k|p|f|g)ed the', '-$1t-thi'],
+  ['(?<!r)(v|p|t|k|n)ed\\b', '-$1t'],
   ['t h', "-t'h"],
   ['ve th', '-Vth'],
-  ['m to\\b', 'm:rə'],
-  ['n these', 'niz'],
-  ['n the\\b', 'nnah'],
-  ['have to', 'hafta'],
+  ['m to\\b', '-m:rə'],
+  ['n these', '-niz'],
+  ['n the\\b', '-nnah'],
+  ['have to', 'ha-fta'],
   ['t are you', 'tcha'],
   ['cause s', 'causs'],
   ['out in', 'a··in'],
@@ -330,17 +330,15 @@ let myDict = [
 // })
 
 function generateConnected(frase) {
-  console.log(frase)
   const steps = []
-
   const sentenceConnected = myDict.reduce((acc, curr) => {
     const replaced = curr
       ? acc.replace(new RegExp(curr[0], 'gi'), curr[1].replace(/\./g, '-'))
       : acc
-    if (acc !== replaced) console.log('       R:', curr.join(' = '))
+    // if (acc !== replaced) console.log('       R:', curr.join(' = '))
     if (acc !== replaced) {
       steps.push(replaced.replace('\n', ''))
-      console.log(replaced.replace('\n', ''))
+      // console.log(replaced.replace('\n', ''))
     }
     return replaced
   }, frase)
@@ -350,30 +348,24 @@ function generateConnected(frase) {
     steps,
   }
 }
+const fs = require('fs')
 
-// const readlineSync = require('readline-sync')
-// async function app() {
-//   const fraseInput = readlineSync.question('frase: ')
+const txt = fs.readFileSync('./890k sentences in english.txt', {
+  encoding: 'utf-8',
+})
+const sentences = txt.split('\r\n')
+const allCTS = sentences.map((s, i) => {
+  console.log(`${i + 1}/${sentences.length}`)
+  console.clear()
+  return [generateConnected(s).sentenceConnected, s]
+})
+const allCTSSortted = allCTS.sort(
+  (a, b) => b[0].match(/-/g)?.length - a[0].match(/-/g)?.length
+)
 
-//   generateConnected(fraseInput)
+fs.writeFileSync(
+  './export.txt',
+  allCTSSortted.map(v => v.join('\n').replace(/﻿/g, '')).join('\n\n')
+)
 
-//   console.log('\n------------------\n')
-
-//   // console.log(frase.replace(/\.|\n/g, ''))
-//   // console.log('\n------------------\n\n\n')
-//   // app()
-// }
-
-// app()
-
-//But I click on every video and i'm being open about it
-//the women will go to the store because they want to buy shoes
-// but we hadn't heard from Meg all day
-// I tried to get to my kids, whose rooms were on opposite floors.
-// i'd like each of you to pick a name
-// so i want you to pay attention to this one
-// We'll never know if we don't try to help her
-// Thought I was supposed to stay in my room for the rest of my life
-// The truth is, this technology is in its infancy,
-// I don't want you to get the impression
-// by then and I went on the
+console.log(allCTSSortted)

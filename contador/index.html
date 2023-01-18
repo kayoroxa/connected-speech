@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>Contador</header>
+    <main>
+      <section>
+        <button onclick="vergonha()" class="red">Vergonha +0</button>
+        <button onclick="mais_ou_menos()" class="yellow">
+          Mais ou menos +0.5
+        </button>
+        <button onclick="acertei()" class="green">Acertei +1</button>
+      </section>
+      <section id="section-list">
+        <ul id="list"></ul>
+      </section>
+    </main>
+    <footer>
+      <div>Result:</div>
+      <div id="result"></div>
+    </footer>
+    <script>
+      var contador = 0
+
+      function vergonha() {
+        contador += 0
+        document.getElementById('result').innerHTML = contador
+        const listElement = document.getElementById('list')
+        listElement.innerHTML += `<li class="red">${0}</li>`
+      }
+
+      function mais_ou_menos() {
+        contador += 0.5
+        document.getElementById('result').innerHTML = contador
+        const listElement = document.getElementById('list')
+        listElement.innerHTML += `<li class="yellow">${0.5}</li>`
+      }
+
+      function acertei() {
+        contador += 1
+        document.getElementById('result').innerHTML = contador
+        const listElement = document.getElementById('list')
+        listElement.innerHTML += `<li class="green">${1}</li>`
+      }
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === '1') {
+          vergonha()
+          return
+        }
+
+        if (event.key === '2') {
+          mais_ou_menos()
+          return
+        }
+
+        if (event.key === '3') {
+          acertei()
+          return
+        }
+      })
+    </script>
+  </body>
+</html>
