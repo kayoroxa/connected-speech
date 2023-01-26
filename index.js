@@ -25,6 +25,7 @@ let myDict = [
   ["that a", "tha-re"],
   ["isn't it", 'innit'],
   ["t it w", "tê-w"],
+  ["d th", "-th"],
   ['these', 'thiz'],
   ['because it', "b'kazə"],
   ['out of', 'outta'],
