@@ -11,7 +11,7 @@ let myDict = [
   ["\\bas\\b", "ez"],
   ['\\bhis', 'hiz'],
   ["let me", "lemmi"],
-  ['\\bus\\b', 'âs'],
+  ['\\bus\\b', 'âss'],
   ['came', 'keim'],
   ['ne tod', 'n-rəd'],
   ["ve", "v"],
