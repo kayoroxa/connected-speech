@@ -21,6 +21,8 @@ let myDict = [
   ['what (a|e|i|o|u|á|é|í|ó|ú|y|ə)', 'wha-r$1'],
   ['see', 'sii'],
   ["that i'm", 'tha-raimm'],
+  ["that all", "tha-róll"],
+  ["that a", "tha-re"],
   ["isn't it", 'innit'],
   ["t it w", "tê-w"],
   ['these', 'thiz'],
