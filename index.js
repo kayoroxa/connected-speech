@@ -16,7 +16,7 @@ let myDict = [
   ['came', 'keim'],
   ['ne tod', 'n-rəd'],
   ["don't have", "ron-hav"],
-  [" have", "'ve"],
+  ["(?<=should|i|she|he|would|we|they) have", "'ve"],
   ["ve", "v"],
   ['\\bout\\b', 'aut'],
   ['at h(is|er|im|iz)', 'e-r$1'],
@@ -338,6 +338,7 @@ let myDict = [
   ['s h', '-s-h'],
   ['zar', 'zəɹ'],
   ["t ", "|"],
+  ["'-", "-"],
   // ['ve\\b', 'v'],
 ]
 
