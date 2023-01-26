@@ -315,6 +315,7 @@ let myDict = [
   ['s s', '-s'],
   ['s th', '-z'],
   ['t t', '.t'],
+  ["it w", "t-w"],
 
   ['(s|z) r', '-$1ur'],
   // ['(e|a)r\\b', '$1ɹ'], // terminando com ɹ
