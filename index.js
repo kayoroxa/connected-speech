@@ -18,6 +18,7 @@ let myDict = [
   ['me in', 'mi-en'],
   ['nd him', 'n-dêm'],
   ['nd her', 'n-dêr'],
+  ["you to", "yə-ru"],
   ['what it is', 'wha-ri-riz'],
   ['what (a|e|i|o|u|á|é|í|ó|ú|y|ə)', 'wha-r$1'],
   ['see', 'sii'],
