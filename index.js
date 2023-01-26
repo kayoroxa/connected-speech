@@ -14,6 +14,7 @@ let myDict = [
   ['\\bus\\b', 'âs'],
   ['came', 'keim'],
   ['ne tod', 'n-rəd'],
+  ["ve", "v"],
   ['\\bout\\b', 'aut'],
   ['at h(is|er|im|iz)', 'e-r$1'],
   ['\\bat\\b', 'et'],
