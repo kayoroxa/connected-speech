@@ -17,7 +17,7 @@ let myDict = [
   ['ne tod', 'n-rəd'],
   ["don't have", "ron-hav"],
   ["(?<=should|i|she|he|would|we|they) have", "'ve"],
-  ["ve", "v"],
+  ["(v|k)e", "$1"],
   ['\\bout\\b', 'aut'],
   ['at h(is|er|im|iz)', 'e-r$1'],
   ['\\bat\\b', 'et'],
