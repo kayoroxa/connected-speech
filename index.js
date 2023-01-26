@@ -7,7 +7,7 @@ let myDict = [
   ['this is', 'thi-siz'],
   ['you were to', 'you ədə'],
   ['can', 'ken'],
-  ['his', 'hiz'],
+  ['\\bhis', 'hiz'],
   ["let me", "lemmi"],
   ['\\bus\\b', 'as'],
   ['came', 'keim'],
@@ -305,6 +305,7 @@ let myDict = [
   ['t (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-t$1'],
   ['(d) (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-$1$2'],
   ['(v|u|w) (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-$1$2'],
+  ['(s) (a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-$1$2'],
 
   ['(k|p|f|g|bly|ch) (a|e|i|o|u|á|é|í|ó|ú|y|ea|w|ə)', '-$1$2'],
   ['n m', '.m'],
