@@ -8,6 +8,7 @@ let myDict = [
   ['you were to', 'you ədə'],
   ['can', 'ken'],
   ['his', 'hiz'],
+  ["let me", "lemme"],
   ['\\bus\\b', 'as'],
   ['came', 'keim'],
   ['ne tod', 'n-rəd'],
