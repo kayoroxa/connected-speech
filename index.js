@@ -264,7 +264,7 @@ let myDict = [
   ['m to\\b', 'm:rə'],
   ['n these', 'niz'],
   ['n the\\b', 'nnah'],
-  ['have to', 'hafta'],
+  [' have', '-v'],
   ['t are you', 'tcha'],
   ['cause s', 'causs'],
   ['out in', 'a··in'],
