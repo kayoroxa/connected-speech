@@ -250,7 +250,7 @@ let myDict = [
   ['should we', 'shou-we'],
   ['and i', 'enai'],
   ["'ve", 'V'],
-
+  ['y have', 'y-v'],
   ['\\bask th(em|ese|at)', 'es-t$1'],
   ['d them', '-dem'],
   ['ss them', '-ssəm'],
@@ -264,7 +264,7 @@ let myDict = [
   ['m to\\b', 'm:rə'],
   ['n these', 'niz'],
   ['n the\\b', 'nnah'],
-  [' have', '-v'],
+
   ['t are you', 'tcha'],
   ['cause s', 'causs'],
   ['out in', 'a··in'],
