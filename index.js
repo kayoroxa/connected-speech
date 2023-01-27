@@ -219,6 +219,7 @@ let myDict = [
   ['for the', 'fôthê'],
   ["didn't", 'rin'],
   ["doesn't", 'doesn'],
+  ["gonna", "gon"],
   // ['n you', 'nyou'],
   ['with this', 'withis'],
   ['should we', 'shou-we'],
