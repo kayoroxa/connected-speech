@@ -31,6 +31,7 @@ let myDict = [
   ["what have you", "whatcha"],
   ["would have", "woulda"],
   ["wouldn't have", "wouldn-a"],
+  ["have to", "hafta"],
   ["something", "soming"],
   ["\\bas\\b", "ez"],
   ['\\bhis', 'hiz'],
