@@ -10,6 +10,7 @@ let myDict = [
   ["\\bas s", "e-s"],
   ["come one", "c'mon"],
   ["could have", "kuda"],
+    ['y have', 'y-v'],
   ["cup of", "câppa"],
   ["did you", "didja"],
   ["didn't you", "din-tcha"],
@@ -250,7 +251,7 @@ let myDict = [
   ['should we', 'shou-we'],
   ['and i', 'enai'],
   ["'ve", 'V'],
-  ['y have', 'y-v'],
+
   ['\\bask th(em|ese|at)', 'es-t$1'],
   ['d them', '-dem'],
   ['ss them', '-ssəm'],
