@@ -11,6 +11,7 @@ let myDict = [
   ["come one", "c'mon"],
   ["could have", "kuda"],
     ['y have', 'y-v'],
+  ["what are", "wha-rə"],
   ["cup of", "câppa"],
   ["did you", "didja"],
   ["didn't you", "din-tcha"],
