@@ -153,6 +153,7 @@ let myDict = [
   ['how (do|to)', 'haw-rə'],
   ["what's", 'watts'],
   ['with the', 'ui-thee'],
+  ["ing th", "in-n"],
   ["it's a", 'tsuh'],
   ['i am', 'aiem'],
   ["i'm", 'amm'],
