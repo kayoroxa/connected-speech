@@ -108,6 +108,7 @@ let myDict = [
   ["it's the", "it'sâh"],
   ['it is the', "it'sâh"],
   ['let just', 'le-tjust'],
+  ["and in", "an-ni"],
   ['and also', 'ə-nol-sôl'],
   ['and i also', 'ə-na-also'],
   ['does this have', 'dâzês.ave'],
