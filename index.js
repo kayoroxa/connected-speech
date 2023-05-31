@@ -153,7 +153,7 @@ let myDict = [
   ['p (a|e|i|o|u|á|é|í|ó|ú|ə)', '-p$1'],
   ['how (do|to)', 'haw-rə'],
   ["what's", 'watts'],
-  ['with the', 'ui-thee'],
+  ['with the', 'ui-the'],
   ["ing th", "in-n"],
   ["it's a", 'tsuh'],
   ['i am', 'aiem'],
@@ -230,7 +230,7 @@ let myDict = [
   ['with all', 'wi-thól'],
   ['did i ever tell you', 'dirai ever tellyou'],
   ["How'd you", 'howdju'],
-
+  ["the (a|e|i|o|u)", "thi $1"],
   ['about anything', 'abouranything'],
   ["l'm actually", "i'machually"],
   ['go together', 'gorogether'],
