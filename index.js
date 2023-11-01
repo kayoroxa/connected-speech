@@ -59,7 +59,7 @@ let myDict = [
   ['me in', 'mi-en'],
   ['nd him', 'n-dêm'],
   ['nd her', 'n-dêr'],
-  ['you to', 'yə-ru'],
+
   ['what it is', 'wha-ri-riz'],
   ['what (a|e|i|o|u|á|é|í|ó|ú|y|ə)', 'wha-r$1'],
   ['see', 'sii'],
@@ -102,6 +102,7 @@ let myDict = [
   ['to the', 'dârah'],
   ['([^aeiouy]) to\\b', '$1 tə'],
   ['([aeiouy]) to\\b', '$1 rə'],
+  // ['you to', 'yə-ru'],
   ['which is', 'wichis'],
   ['(k|ss|sh|p|f|c|ch|x)ed\\b', '$1t'],
   ['(b|g|ll|m|n|r|v|w|y|z)ed\\b', '$1d'],
