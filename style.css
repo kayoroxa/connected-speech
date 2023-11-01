@@ -93,3 +93,8 @@ a {
 *::selection {
   color: hsl(170, 40%, 60%);
 }
+
+#logo {
+  font-size: 30px;
+  opacity: 0.1;
+}
