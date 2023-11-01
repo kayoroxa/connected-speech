@@ -14,7 +14,7 @@ let myDict = [
   ['could have', 'kuda'],
   ['y have', 'y-v'],
   [' had to', '-də'],
-  ['asked', 'askt'],
+  ['asked', 'ast'],
   ['what are', 'wha-rə'],
   ['cup of', 'câppa'],
   ['did you', 'didja'],
