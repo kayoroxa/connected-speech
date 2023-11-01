@@ -68,7 +68,7 @@ let myDict = [
   ['that a', 'tha-re'],
   ["isn't it", 'innit'],
   ['t it w', 'tê-w'],
-  ['d th', '-th'],
+
   ['these', 'thiz'],
   ['because it', "b'kazə"],
   ['out of', 'outta'],
@@ -100,8 +100,8 @@ let myDict = [
   ['wants to', 'wan-stə'],
   ['want to', 'wanna'],
   ['to the', 'dârah'],
-  ['([^aeiouy]) to', '$1 tə'],
-  ['([aeiouy]) to', '$1 rə'],
+  ['([^aeiouy]) to\\b', '$1 tə'],
+  ['([aeiouy]) to\\b', '$1 rə'],
   ['which is', 'wichis'],
   ['(k|ss|sh|p|f|c|ch|x)ed\\b', '$1t'],
   ['(b|g|ll|m|n|r|v|w|y|z)ed\\b', '$1d'],
@@ -184,6 +184,7 @@ let myDict = [
   ['t you', '-tchiu'],
   ['you', 'yə'],
   ['\\bi\\b', 'ai'],
+  ['d th', '-d'],
   ['\\bThe a', 'Thi-a'],
   ['\\bface\\b', 'feiss'],
   ['(w)me? (a|e|i|o|u|á|é|í|ó|ú|ə)', '$1-M$2'],
@@ -264,6 +265,7 @@ let myDict = [
   // ['n you', 'nyou'],
   ['with this', 'withis'],
   ['should we', 'shou-we'],
+  ['d th', '-d'],
   ['and i', 'enai'],
   ["'ve", 'V'],
 
@@ -318,6 +320,7 @@ let myDict = [
 
   // ["(n|v|p|g|s|m|k|(?<!f)f|th|r|l) (h(?!as)|')?(a|e|i|o|w|u|y)", '-$1$3'],
   ['(y|i) s', '.$1s'],
+
   ['\\bthem\\b', "'em"],
   ['\\bhim\\b', 'im'],
   ['\\bhis\\b', 'is'],
