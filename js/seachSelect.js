@@ -9,6 +9,7 @@ function getSelectionText() {
 }
 
 document.addEventListener('keydown', e => {
+  if (!e.ctrlKey) return
   const text = getSelectionText()
   if (e.key.toLowerCase() === 'y' && text) {
     e.preventDefault()

@@ -1,7 +1,9 @@
 const end = '(?=[.?!]|$)'
+// got himself
 
 let myDict = [
   ['what do you', 'wha-r-yah'],
+  ['wanted to', 'wa-nih-da'],
   ["i'm going to", 'ahmma'],
   ["i'm gonna", 'ahmma'],
   ['k who', '-ko'],
@@ -11,7 +13,8 @@ let myDict = [
   ['can', 'ken'],
   ['\\bas s', 'e-s'],
   ['come one', "c'mon"],
-  ['could have', 'kuda'],
+  ['could have', 'kurah'],
+  ['could he', 'kuri'],
   ['y have', 'y-v'],
   [' had to', '-də'],
   ['asked', 'ast'],
@@ -33,6 +36,7 @@ let myDict = [
   ['much of', 'mucha'],
   ['must have', 'musta'],
   ['ought to', 'ôuta'],
+  ['will you', 'wil-liu'],
   ['should have', 'shura'],
   ["shouldn't have", 'shudn-a'],
   ['want a', 'wanna'],
@@ -57,8 +61,6 @@ let myDict = [
   ['at h(is|er|im|iz)', 'e-r$1'],
   ['\\bat\\b', 'et'],
   ['me in', 'mi-en'],
-  ['nd him', 'n-dêm'],
-  ['nd her', 'n-dêr'],
 
   ['what it is', 'wha-ri-riz'],
   ['what (a|e|i|o|u|á|é|í|ó|ú|y|ə)', 'wha-r$1'],
@@ -126,7 +128,7 @@ let myDict = [
   ['does this have', 'dâzês.ave'],
   ['does that', 'zat'],
   ['nd that', 'n.nat'],
-  ["'?t th", '-th'],
+
   ['does this', 'dâzes'],
   ['as him', 'asim'],
   ['asked (him|her|if)', 'esT.$1'],
@@ -134,6 +136,14 @@ let myDict = [
   ['Read h(im|er|is|iz)', 'ri-d$1'],
   ['(ɹi|ɹe|re|a)d him', '-dêm'],
   ['(ɹi|ɹe|re|a)d him', '-dêr'],
+  ['nd him', 'n-dêm'],
+  ['nd her', 'n-dêr'],
+  ['\\bthem\\b', 'em'],
+  ['\\bhim\\b', 'im'],
+  ['\\bhis\\b', 'is'],
+  ['\\bher\\b', 'er'],
+  ["'?t th", '-th'],
+  ['ve h(er|him)', '-v$1'],
   ['m h(im|er|is|iz)', '-M$1'],
   ['(k)e? h(im|er|is|iz)', '-$1$2'],
   ['gonna', 'gon'],
@@ -191,7 +201,6 @@ let myDict = [
   ['(w)me? (a|e|i|o|u|á|é|í|ó|ú|ə)', '$1-M$2'],
   ['ve i', 'vi', false],
 
-  ['ve h(er|him)', '-v$1'],
   ['s of y', 'səy'],
   ['of what', 'ovuat'],
   ['of\\b', 'əv'],
@@ -322,10 +331,6 @@ let myDict = [
   // ["(n|v|p|g|s|m|k|(?<!f)f|th|r|l) (h(?!as)|')?(a|e|i|o|w|u|y)", '-$1$3'],
   ['(y|i) s', '.$1s'],
 
-  ['\\bthem\\b', "'em"],
-  ['\\bhim\\b', 'im'],
-  ['\\bhis\\b', 'is'],
-  ['\\bher\\b', 'er'],
   ['d a', '-da'],
 
   ['have a', 'ha-va'],
@@ -348,6 +353,7 @@ let myDict = [
   ['and', 'an'],
   ['ide (you|yə)', 'i-dju'],
   ['(?<=\\w)(m|k|r|f)e\\b', '$1'],
+  ['n he', '-ni'],
   ['m (â|a|e|i|o|u|á|é|í|ó|ú|y|w|ə)', '-m$1'],
   ['z (â|a|e|i|o|u|á|é|í|ó|ú|y|ə)', '-z$1'],
   ['ce (â|a|i|o|u|á|í|ó|ú|y|ə)', '-ç$1'],
